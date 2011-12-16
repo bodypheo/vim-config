@@ -2,8 +2,8 @@
 "https://raw.github.com/nvie/vimrc/master/vimrc 
 "https://github.com/derekwyatt/vim-config/blob/master/vimrc
 filetype off
-"call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 filetype plugin indent on
 "Modificamos la tecla líder por defecto \ a la coma ,
 let mapleader=","

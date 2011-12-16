@@ -1,3 +1,7 @@
+Fuentes:
+http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+http://help.github.com/create-a-repo/
+
 Instalación de vim con git
 	Crear un directorio .vim
 	copiar .vimrc a .vim/vimrc
