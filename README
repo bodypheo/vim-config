@@ -1,0 +1,8 @@
+Instalación de vim con git
+	Crear un directorio .vim
+	copiar .vimrc a .vim/vimrc
+Crear enlaces simbólicos
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/~/.gvimrc
+Cambiar al directior ~/.vim e iniciar el repositorio
+    git submodule init
