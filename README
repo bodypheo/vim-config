@@ -10,3 +10,9 @@ Crear enlaces simbólicos
     ln -s ~/.vim/~/.gvimrc
 Cambiar al directior ~/.vim e iniciar el repositorio
     git submodule init
+Instalar plguins
+cd ~/.vim
+mkdir ~/.vim/bundle
+git submodule add http://url.git
+git add .
+git commit -m "Install Fugitive.vim bundle as a submodule."

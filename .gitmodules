@@ -7,3 +7,6 @@
 [submodule "bundle/project"]
 	path = bundle/project
 	url = https://github.com/vim-scripts/project.tar.gz.git
+[submodule "bundle/vim-outliner"]
+	path = bundle/vim-outliner
+	url = https://github.com/vim-scripts/VimOutliner.git
