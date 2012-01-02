@@ -1,0 +1,1 @@
+git submodule add https://github.com/scrooloose/nerdtree.git bundle/vim-nerdtree plugin

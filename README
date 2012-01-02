@@ -14,5 +14,7 @@ Instalar plguins
 cd ~/.vim
 mkdir ~/.vim/bundle
 git submodule add http://url.git
+Añadimos el directorio actual completo:
 git add .
+Hacemos un commit con la descripción del cambio.
 git commit -m "Install Fugitive.vim bundle as a submodule."
