@@ -10,3 +10,9 @@
 [submodule "bundle/vim-outliner"]
 	path = bundle/vim-outliner
 	url = https://github.com/vim-scripts/VimOutliner.git
+[submodule "bundle/vim-preview"]
+	path = bundle/vim-preview
+	url = https://github.com/greyblake/vim-preview.git
+[submodule "bundle/vim-nerdtree"]
+	path = bundle/vim-nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
