@@ -10,6 +10,20 @@ let mapleader=","
 "Creamos el acceso directo a editar .vimrc con ,ev<CR> y ,sv<CR> para cargarlo de nuevo
 nmap <silent> <leader>ev :e $MYVIMRC
 nmap <silent> <leader>sv :so $MYVIMRC
+"Mapeamos ,s para salvado rápido
+noremap <leader>s :update
+"Mapeamos ,w para insertar una palabra rapidamente
+nmap <buffer> <silent> ,w :exec ":imap \<space\> \<space\>\<esc\>,BB"<CR>i
+nmap <buffer> <silent> ,BB :exec ":iunmap \<space\>"<CR>
+"Desmapeo las teclas de dirección para acostumbrarme a hjkl
+noremap <Up> ""
+noremap! <Up> <Esc>
+noremap <Down> ""
+noremap! <Down> <Esc>
+noremap <Left> ""
+noremap! <Left> <Esc>
+noremap <Right> ""
+noremap! <Right> <Esc>
 "Cambiamos el aspecto
 set ruler
 set wrapscan
