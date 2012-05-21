@@ -16,3 +16,6 @@
 [submodule "bundle/vim-nerdtree"]
 	path = bundle/vim-nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "conky-syntax.vim"]
+	path = conky-syntax.vim
+	url = https://github.com/smancill/conky-syntax.vim
