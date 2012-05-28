@@ -33,6 +33,9 @@ set backspace=start,indent,eol
 set t_Co=256
 colorscheme wombat256mod
 set showmode
+set incsearch "Muestra la primera coincidencia al usar la busqueda.
+set hlsearch " Resalta los térmnos de búsqueda.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 set tags=tags;~/.vim/tags/CodeIgniter
 syntax on
