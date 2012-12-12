@@ -24,6 +24,18 @@ noremap <Left> ""
 noremap! <Left> <Esc>
 noremap <Right> ""
 noremap! <Right> <Esc>
+"Muestra tabs y eol al pulsar la tecla líder seguida de l
+:set listchars=tab:▸\ ,eol:¬
+nmap <leader>l :set list!<CR>
+"Mapeo teclas  en modo edición
+imap <C-h> <Left>
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-l> <Right>
+imap <C-x> <Delete>
+imap <C-z> <BS>
+"Borrar caracter anterior en edicióv
+noremap <C-S-X> <esc>Xi
 "Cambiamos el aspecto
 set ruler
 set wrapscan
@@ -40,3 +52,4 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 set tags=tags;~/.vim/tags/CodeIgniter
 syntax on
 set exrc
+set colorcolumn=80
