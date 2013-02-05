@@ -13,14 +13,14 @@ call pathogen#helptags()
 filetype plugin indent on
 "Modificamos la tecla líder por defecto \ a la coma ,
 let mapleader=","
-"Creamos el acceso directo a editar .vimrc con ,ev<CR> y ,sv<CR> para cargarlo de nuevo
+"creamos el acceso directo a editar .vimrc con ,ev<cr> y ,sv<cr> para cargarlo de nuevo
 nmap <silent> <leader>ev :e $MYVIMRC
 nmap <silent> <leader>sv :so $MYVIMRC
 nmap <silent> <leader>em :e ~/.config/openbox/menu.xml
 nmap <silent> <leader>er :e ~/.config/openbox/rc.xml
 
 "Mapeamos ,s para salvado rápido
-noremap <leader>s :update
+noremap <leader>s :update<CR>
 "Desmapeo las teclas de dirección para acostumbrarme a hjkl
 noremap <Up> ""
 noremap! <Up> <Esc>
@@ -58,7 +58,6 @@ set backspace=start,indent,eol
 set t_Co=256
 colorscheme wombat256mod
 syntax on
-set colorcolumn=80
 set showmode
 "Deshabilitamos los archivos de copia de seguridad
 set nobackup
