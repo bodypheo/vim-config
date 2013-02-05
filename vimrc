@@ -35,10 +35,12 @@ set pastetoggle=<F2>
 :set listchars=tab:▸\ ,eol:¬
 nmap <leader>l :set list!<CR>
 " Easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+nmap <TAB> <C-w>
+nmap <TAB><TAB> <C-w><C-w>
+"map <C-h> <C-w>h
+"map <C-j> <C-w>j
+"map <C-k> <C-w>k
+"map <C-l> <C-w>l
 "Mapeo teclas para insertar/borrar líneas en blanco NO FUNCIONA.
 "nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
 "nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
@@ -58,12 +60,9 @@ set backspace=start,indent,eol
 set t_Co=256
 colorscheme wombat256mod
 syntax on
-<<<<<<< HEAD
-=======
 if has ( "colorcolumn" )
 		set colorcolumn=80
 endif
->>>>>>> 04669dcc1ec150801fbf69401b2ef9d3e8fcd3ea
 set showmode
 "Deshabilitamos los archivos de copia de seguridad
 set nobackup
