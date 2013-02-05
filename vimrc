@@ -58,6 +58,12 @@ set backspace=start,indent,eol
 set t_Co=256
 colorscheme wombat256mod
 syntax on
+<<<<<<< HEAD
+=======
+if has ( "colorcolumn" )
+		set colorcolumn=80
+endif
+>>>>>>> 04669dcc1ec150801fbf69401b2ef9d3e8fcd3ea
 set showmode
 "Deshabilitamos los archivos de copia de seguridad
 set nobackup
