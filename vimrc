@@ -2,25 +2,35 @@
 "https://raw.github.com/nvie/vimrc/master/vimrc 
 "https://github.com/derekwyatt/vim-config/blob/master/vimrc
 "http://nvie.com/posts/how-i-boosted-my-vim/
+"https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
+"
 " Atajos de teclado:
 " ,s guardado	,ev	Editar vimrc	,sv Recargar vimrc	,l Show Tabs & Intros
+" ,tl muestra/oculta las líneas de código para copiar texto.
 " <F2> Activa pegado (Para que no indente y no comente etc"
 " Ctrl-h/j/k/l Mueve por ventanas para no tener que pulsar control+w
 ",em edita menu de openbox ,er edita rc de openbox
+
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
+
+"MAPEO DE LA TECLA LIDER
 "Modificamos la tecla líder por defecto \ a la coma ,
 let mapleader=","
+noremap <leader>,nt :NERDTree<cr>
 "creamos el acceso directo a editar .vimrc con ,ev<cr> y ,sv<cr> para cargarlo de nuevo
-nmap <silent> <leader>ev :e $MYVIMRC
-nmap <silent> <leader>sv :so $MYVIMRC
+nmap <silent> <leader>ev :e $MYVIMRC<cr>
+nmap <silent> <leader>sv :so $MYVIMRC<cr>
 nmap <silent> <leader>em :e ~/.config/openbox/menu.xml
 nmap <silent> <leader>er :e ~/.config/openbox/rc.xml
-
+nmap <silent> <leader>tl :set invnumber<cr>
 "Mapeamos ,s para salvado rápido
 noremap <leader>s :update<CR>
+
+"Mapeo de la tecla escape:
+inoremap jk <Esc>
 "Desmapeo las teclas de dirección para acostumbrarme a hjkl
 noremap <Up> ""
 noremap! <Up> <Esc>
@@ -37,15 +47,8 @@ nmap <leader>l :set list!<CR>
 " Easy window navigation
 nmap <TAB> <C-w>
 nmap <TAB><TAB> <C-w><C-w>
-"map <C-h> <C-w>h
-"map <C-j> <C-w>j
-"map <C-k> <C-w>k
-"map <C-l> <C-w>l
-"Mapeo teclas para insertar/borrar líneas en blanco NO FUNCIONA.
-"nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
-"nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
-"nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-"nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+set hid
+set autoread
 "Tamaño de tabulador:
 set tabstop=4
 "Cambiamos el aspecto
@@ -56,6 +59,7 @@ set ruler "Muestra línea y columna
 set wrapscan
 set number
 set title
+set foldcolumn=1
 set backspace=start,indent,eol
 set t_Co=256
 colorscheme wombat256mod
