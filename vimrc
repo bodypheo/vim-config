@@ -3,6 +3,7 @@
 "https://github.com/derekwyatt/vim-config/blob/master/vimrc
 "http://nvie.com/posts/how-i-boosted-my-vim/
 "https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
+"http://blog.sanctum.geek.nz/vim-annoyances/
 "
 " Atajos de teclado:
 " ,s guardado	,ev	Editar vimrc	,sv Recargar vimrc	,l Show Tabs & Intros
@@ -94,7 +95,7 @@ set noswapfile
 set ignorecase "Ignora mayúsculas cuando busca
 set smartcase "Ignora may si el término de busq es minúscula si tiene may no.
 set incsearch "Muestra la primera coincidencia al usar la busqueda.  set hlsearch " Resalta los térmnos de búsqueda.
-"Ponemos opción hidden para que oculte los buffers
+"Oculta los buffers en lugar de cerrarlos.
 set hidden
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
@@ -103,6 +104,7 @@ au Filetype html,xml,xsl source ~/.vim/bundle/closetag/plugin/closetag.vim
 "exrc http://www.ilker.de/specific-vim-settings-per-project.html
 set exrc "Respeta los archivos .exrc y .vimrc locales en carpetas
 set secure "Hace exrc que sea seguro.
+
 "Va a la última posición donde se encontraba el archivo cuando se cerro.
 "http://nixtricks.wordpress.com/2012/01/05/vim-automatically-jump-to-the-last-visited-line-when-a-file-is-reopened/
 if has("autocmd")
