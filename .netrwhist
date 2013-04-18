@@ -1,6 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/juanmi'
 let g:netrw_dirhist_2='/home/juanmi/perl'
 let g:netrw_dirhist_3='/home/juanmi/perl/ejercicios'
 let g:netrw_dirhist_4='/home/juanmi/.vim'
+let g:netrw_dirhist_5='/home/juanmi/Dropbox/Linux/Perl/ejercicios'
+let g:netrw_dirhist_6='/home/juanmi/Dropbox/Linux/Perl'
+let g:netrw_dirhist_7='/home/juanmi/Dropbox/Linux'
