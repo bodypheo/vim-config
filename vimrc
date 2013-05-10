@@ -47,8 +47,8 @@ nmap <silent> <leader>ea :e ~/.config/openbox/autostart<cr>
 nmap <silent> <leader>et :e ~/.tmux.conf<cr>
 nmap <silent> <leader>tl :set invnumber<cr>
 "Mapeamos ,s para salvado rápido
-noremap <leader>s :update<CR>
-
+noremap <leader>s :update<cr>
+noremap <leader>f /
 "Para avance de página con espacio
 map <Space> <C-d>
 "Mapeo de la tecla escape:
@@ -86,17 +86,6 @@ nnoremap K :q<cr>
 "##############################################################
 " Opciones gráficas
 "##############################################################
-"Tamaño de tabulador:
-set tabstop=4
-"Cambiamos el aspecto
-set laststatus=2 "Muestra la barra de estado siempre
-"set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%d/%m/%Y-%H:%M\")}%=\ col:%c%V\ ascii:%b\ pos:%o\ lin:%l\,%L\ %P
-set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
-set ruler "Muestra línea y columna 
-set wrapscan
-set number
-set title
-set foldcolumn=1
 set t_Co=256
 if has ('gui_running')
 	set guioptions-=T " sin barra de herramientas.
@@ -107,6 +96,22 @@ if has ('gui_running')
 else
 	colorscheme wombat256mod
 endif
+"Tamaño de tabulador:
+set tabstop=4
+"Cambiamos el aspecto
+set laststatus=2 "Muestra la barra de estado siempre
+"set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%d/%m/%Y-%H:%M\")}%=\ col:%c%V\ ascii:%b\ pos:%o\ lin:%l\,%L\ %P
+"set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
+set statusline=
+set statusline+=%02n\|
+set statusline+=%-.25F
+set statusline+=[%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+set statusline+=\ %{strftime(\"%H:%M\")}
+set ruler "Muestra línea y columna 
+set wrapscan
+set number
+set title
+set foldcolumn=1
 syntax on
 if has ( "colorcolumn" )
 		set colorcolumn=80
@@ -130,7 +135,7 @@ if has("autocmd")
   \ endif
 endif
 au FocusLost * :silent! wall
-
+set switchbuf=useopen,usetab
 "##############################################################
 " Creditos 
 "##############################################################
