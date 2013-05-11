@@ -136,6 +136,7 @@ if has("autocmd")
 endif
 au FocusLost * :silent! wall
 set switchbuf=useopen,usetab
+set vb t_vb=
 "##############################################################
 " Creditos 
 "##############################################################
