@@ -1,31 +1,34 @@
 " Atajos de teclado:
 " ,s guardado	,ev	Editar vimrc	,sv Recargar vimrc	,i Show invisible
 " chars
-" ,tl muestra/oculta las líneas de código para copiar texto.
+" ,tl muestra/oculta las lﾃｭneas de cﾃｳdigo para copiar texto.
 " ,e carg NerdTree
 " <F2> Activa pegado (Para que no indente y no comente etc"
 " Ctrl-h/j/k/l Mueve por ventanas para no tener que pulsar control+w
 ",em edita menu de openbox ,er edita rc de openbox
+"F9 ejecuta el script de python
 
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
 set nocompatible
+"Codificación japones
+"set fileencodings=iso-2022-jp,euc,jp,cp932,utf8,default,latin1
 
 "##############################################################
-" Opciones básicas
+" Opciones bﾃ｡sicas
 "##############################################################
-"Autoread funciona cuando se ejecuta algún comando en la shell. P.ej:
-":checkdate o al guardar.También se puede poner un autocmd
+"Autoread funciona cuando se ejecuta algﾃｺn comando en la shell. P.ej:
+":checkdate o al guardar.Tambiﾃｩn se puede poner un autocmd
 set autoread
 "Deshabilitamos los archivos de copia de seguridad
 set nobackup
 set noswapfile
 "Configuraciones sobre busquedas.
-set ignorecase "Ignora mayúsculas cuando busca
-set smartcase "Ignora may si el término de busq es minúscula si tiene may no.
-set incsearch "Muestra la primera coincidencia al usar la busqueda.  set hlsearch " Resalta los térmnos de búsqueda.
+set ignorecase "Ignora mayﾃｺsculas cuando busca
+set smartcase "Ignora may si el tﾃｩrmino de busq es minﾃｺscula si tiene may no.
+set incsearch "Muestra la primera coincidencia al usar la busqueda.  set hlsearch " Resalta los tﾃｩrmnos de bﾃｺsqueda.
 "Oculta los buffers en lugar de cerrarlos.
 set hidden
 "exrc http://www.ilker.de/specific-vim-settings-per-project.html
@@ -46,24 +49,26 @@ nmap <silent> <leader>er :e ~/.config/openbox/rc.xml<cr>
 nmap <silent> <leader>ea :e ~/.config/openbox/autostart<cr>
 nmap <silent> <leader>et :e ~/.tmux.conf<cr>
 nmap <silent> <leader>tl :set invnumber<cr>
-"Mapeamos ,s para salvado rápido
+"Mapeado de ejecución de python
+nnoremap :update<cr> <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+"Mapeamos ,s para salvado rﾃ｡pido
 noremap <leader>s :update<cr>
 noremap <leader>f /
-"Para avance de página con espacio
+"Para avance de pﾃ｡gina con espacio
 map <Space> <C-d>
 "Mapeo de la tecla escape:
 inoremap jk <Esc>
-"Impedir que mueva el cursor cuando usemos J para unir líneas
+"Impedir que mueva el cursor cuando usemos J para unir lﾃｭneas
 nnoremap J mzJ'z
-"Centrar la pantalla después de buscar o ir al siguiente párrafo
+"Centrar la pantalla despuﾃｩs de buscar o ir al siguiente pﾃ｡rrafo
 nnoremap n nzz
 nnoremap } }zz
 
-"Mapeo de gj y gh para que vaya línea a línea aunque no haya salto de línea
+"Mapeo de gj y gh para que vaya lﾃｭnea a lﾃｭnea aunque no haya salto de lﾃｭnea
 "(softwrap)
 map j gj
 map k gk
-"Desmapeo las teclas de dirección para acostumbrarme a hjkl
+"Desmapeo las teclas de direcciﾃｳn para acostumbrarme a hjkl
 noremap <Up> ""
 noremap! <Up> <Esc>
 noremap <Down> ""
@@ -75,8 +80,8 @@ noremap! <Right> <Esc>
 set pastetoggle=<F2>
 "Para no activar el mode EX
 nnoremap Q <nop>
-"Muestra tabs y eol al pulsar la tecla líder seguida de l
-:set listchars=tab:▸\ ,eol:¬
+"Muestra tabs y eol al pulsar la tecla lﾃｭder seguida de l
+":set listchars=tab:笆ｸ\ ,eol:ﾂｬ
 nmap <leader>i :set list!<CR>
 " Easy window navigation
 nmap <TAB> <C-w>
@@ -84,7 +89,7 @@ nmap <TAB><TAB> <C-w><C-w>
 nnoremap K :q<cr>
 
 "##############################################################
-" Opciones gráficas
+" Opciones grﾃ｡ficas
 "##############################################################
 set t_Co=256
 if has ('gui_running')
@@ -96,7 +101,7 @@ if has ('gui_running')
 else
 	colorscheme wombat256mod
 endif
-"Tamaño de tabulador:
+"Tamaﾃｱo de tabulador:
 set tabstop=4
 "Cambiamos el aspecto
 set laststatus=2 "Muestra la barra de estado siempre
@@ -107,7 +112,7 @@ set statusline+=%02n\|
 set statusline+=%-.25F
 set statusline+=[%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set statusline+=\ %{strftime(\"%H:%M\")}
-set ruler "Muestra línea y columna 
+set ruler "Muestra lﾃｭnea y columna 
 set wrapscan
 set number
 set title
@@ -125,7 +130,7 @@ set completeopt=longest,menuone,preview
 "##############################################################
 au Filetype html,xml,xsl source ~/.vim/bundle/closetag/plugin/closetag.vim
 
-"Va a la última posición donde se encontraba el archivo cuando se cerro.
+"Va a la ﾃｺltima posiciﾃｳn donde se encontraba el archivo cuando se cerro.
 "http://nixtricks.wordpress.com/2012/01/05/vim-automatically-jump-to-the-last-visited-line-when-a-file-is-reopened/
 if has("autocmd")
   " When editing a file, always jump to the last cursor position
