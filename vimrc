@@ -81,7 +81,7 @@ set pastetoggle=<F2>
 "Para no activar el mode EX
 nnoremap Q <nop>
 "Muestra tabs y eol al pulsar la tecla lﾃｭder seguida de l
-":set listchars=tab:笆ｸ\ ,eol:ﾂｬ
+:set listchars=tab:▸\ ,eol:¬,trail:·
 nmap <leader>i :set list!<CR>
 " Easy window navigation
 nmap <TAB> <C-w>
