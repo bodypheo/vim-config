@@ -8,11 +8,11 @@
 ",em edita menu de openbox ,er edita rc de openbox
 "F9 ejecuta el script de python
 
+set nocompatible
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype plugin indent on
-set nocompatible
 "Codificación japones
 "set fileencodings=iso-2022-jp,euc,jp,cp932,utf8,default,latin1
 
