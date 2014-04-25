@@ -4,12 +4,6 @@
 [submodule "bundle/perl-support"]
 	path = bundle/perl-support
 	url = https://github.com/vim-scripts/perl-support.vim.git
-[submodule "bundle/project"]
-	path = bundle/project
-	url = https://github.com/vim-scripts/project.tar.gz.git
-[submodule "bundle/vim-outliner"]
-	path = bundle/vim-outliner
-	url = https://github.com/vim-scripts/VimOutliner.git
 [submodule "bundle/vim-preview"]
 	path = bundle/vim-preview
 	url = https://github.com/greyblake/vim-preview.git
@@ -28,6 +22,3 @@
 [submodule "bundle/vim-kolor"]
 	path = bundle/vim-kolor
 	url = https://github.com/zeis/vim-kolor.git
-[submodule "bundle/distinguished"]
-	path = bundle/distinguished
-	url = https://github.com/Lokaltog/vim-distinguished.git

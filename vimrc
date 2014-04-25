@@ -49,11 +49,16 @@ nmap <silent> <leader>er :e ~/.config/openbox/rc.xml<cr>
 nmap <silent> <leader>ea :e ~/.config/openbox/autostart<cr>
 nmap <silent> <leader>et :e ~/.tmux.conf<cr>
 nmap <silent> <leader>tl :set invnumber<cr>
+nmap <silent> <leader>c :Errors<cr> 
+nmap <silent> <leader>n :NERDTree<cr> 
+
 "Mapeado de ejecución de python
 nnoremap :update<cr> <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+
 "Mapeamos ,s para salvado rﾃ｡pido
 noremap <leader>s :update<cr>
 noremap <leader>f /
+
 "Para avance de pﾃ｡gina con espacio
 map <Space> <C-d>
 "Mapeo de la tecla escape:
@@ -87,6 +92,9 @@ nmap <leader>i :set list!<CR>
 nmap <TAB> <C-w>
 nmap <TAB><TAB> <C-w><C-w>
 nnoremap K :q<cr>
+
+"Convertir mardkdown to html
+nmap <leader>md :%!~/.vim/external/Markdown.pl --html4tags<cr>
 
 "##############################################################
 " Opciones grﾃ｡ficas
@@ -142,6 +150,33 @@ endif
 au FocusLost * :silent! wall
 set switchbuf=useopen,usetab
 set vb t_vb=
+"#############################################################
+"Startify
+"
+let g:startify_custom_header = [
+\'                   ___           ___           ___           ___                  ',
+\'       ___        /  /\         /  /\         /  /\         /  /\           ___   ',
+\'      /__/\      /  /:/        /  /::\       /  /::|       /  /::|         /__/\  ',
+\'      \__\:\    /  /:/        /  /:/\:\     /  /:|:|      /  /:|:|         \__\:\ ',
+\'  ___ /  /::\  /  /:/        /  /::\ \:\   /  /:/|:|__   /  /:/|:|__       /  /::\',
+\' /__/\  /:/\/ /__/:/     /\ /__/:/\:\_\:\ /__/:/ |:| /\ /__/:/_|::::\   __/  /:/\/',
+\' \  \:\/:/~~  \  \:\    /:/ \__\/  \:\/:/ \__\/  |:|/:/ \__\/  /~~/:/  /__/\/:/~~ ',
+\'  \  \::/      \  \:\  /:/       \__\::/      |  |:/:/        /  /:/   \  \::/    ',
+\'   \__\/        \  \:\/:/        /  /:/       |__|::/        /  /:/     \  \:\    ',
+\'                 \  \::/        /__/:/        /__/:/        /__/:/       \__\/    ',
+\'                  \__\/         \__\/         \__\/         \__\/',
+\'',
+\]
+let g:startify_custom_footer = [
+						\'                                                                                          .__         ',
+						\'                                                                                    ___  _|__| _____  ',
+						\'                                                                                    \  \/ /  |/     \ ',
+						\'                                                                                     \   /|  |  Y Y  \',
+						\'                                                                                      \_/ |__|__|_|  /',
+						\'                                                                                                   \/',
+						\'',
+						\]
+
 "##############################################################
 " Creditos 
 "##############################################################
