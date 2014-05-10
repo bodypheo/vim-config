@@ -51,6 +51,7 @@ nmap <silent> <leader>et :e ~/.tmux.conf<cr>
 nmap <silent> <leader>tl :set invnumber<cr>
 nmap <silent> <leader>c :Errors<cr> 
 nmap <silent> <leader>n :NERDTree<cr> 
+nmap <silent> <leader>a :@:<cr>
 
 "Mapeado de ejecución de python
 nnoremap :update<cr> <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
@@ -92,6 +93,10 @@ nmap <leader>i :set list!<CR>
 nmap <TAB> <C-w>
 nmap <TAB><TAB> <C-w><C-w>
 nnoremap K :q<cr>
+
+"Navegar entre buffers:
+:map <C-h> :bp<CR>
+:map <C-l> :bn<CR> 
 
 "Convertir mardkdown to html
 nmap <leader>md :%!~/.vim/external/Markdown.pl --html4tags<cr>
