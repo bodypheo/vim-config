@@ -22,3 +22,30 @@
 [submodule "bundle/vim-kolor"]
 	path = bundle/vim-kolor
 	url = https://github.com/zeis/vim-kolor.git
+[submodule "bundle/html5.vim"]
+	path = bundle/html5.vim
+	url = https://github.com/othree/html5.vim
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-colorscheme-switcher"]
+	path = bundle/vim-colorscheme-switcher
+	url = https://github.com/twe4ked/vim-colorscheme-switcher.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "bundle/vim-obsession"]
+	path = bundle/vim-obsession
+	url = git://github.com/tpope/vim-obsession.git
+[submodule "bundle/vim-python-pep8-indent"]
+	path = bundle/vim-python-pep8-indent
+	url = https://github.com/hynek/vim-python-pep8-indent.git
+[submodule "bundle/vim-signature"]
+	path = bundle/vim-signature
+	url = https://github.com/kshenoy/vim-signature.git
+[submodule "bundle/vim-startify"]
+	path = bundle/vim-startify
+	url = https://github.com/mhinz/vim-startify
+[submodule "bundle/vim256-color"]
+	path = bundle/vim256-color
+	url = git://github.com/noah/vim256-color.git
