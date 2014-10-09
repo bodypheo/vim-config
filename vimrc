@@ -101,6 +101,10 @@ nnoremap K :q<cr>
 "Convertir mardkdown to html
 nmap <leader>md :%!~/.vim/external/Markdown.pl --html4tags<cr>
 
+"Instertar fecha
+:nnoremap <F5> "=strftime("%c")<CR>P
+:inoremap <F5> <C-R>=strftime("%c")<CR>
+
 "##############################################################
 " Opciones grﾃ｡ficas
 "##############################################################
