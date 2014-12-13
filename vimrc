@@ -1,4 +1,4 @@
-" Atajos de teclado:
+"Atajos de teclado:
 " ,s guardado	,ev	Editar vimrc	,sv Recargar vimrc	,i Show invisible
 " chars
 " ,tl muestra/oculta las lﾃｭneas de cﾃｳdigo para copiar texto.
@@ -22,13 +22,18 @@ filetype plugin indent on
 "Autoread funciona cuando se ejecuta algﾃｺn comando en la shell. P.ej:
 ":checkdate o al guardar.Tambiﾃｩn se puede poner un autocmd
 set autoread
+"Cambia atuomáticamente al directorio del fichero abierto
+set autochdir
 "Deshabilitamos los archivos de copia de seguridad
 set nobackup
 set noswapfile
 "Configuraciones sobre busquedas.
 set ignorecase "Ignora mayﾃｺsculas cuando busca
 set smartcase "Ignora may si el tﾃｩrmino de busq es minﾃｺscula si tiene may no.
-set incsearch "Muestra la primera coincidencia al usar la busqueda.  set hlsearch " Resalta los tﾃｩrmnos de bﾃｺsqueda.
+set incsearch "Muestra la primera coincidencia al usar la busqueda.  
+set hlsearch " Resalta los tﾃｩrmnos de bﾃｺsqueda.
+autocmd InsertEnter * :setlocal nohlsearch
+autocmd InsertLeave * :setlocal hlsearch
 "Oculta los buffers en lugar de cerrarlos.
 set hidden
 "exrc http://www.ilker.de/specific-vim-settings-per-project.html
@@ -118,6 +123,7 @@ if has ('gui_running')
 else
 	colorscheme wombat256mod
 endif
+set cursorline "Resalta el número de línea actual
 "Tamaﾃｱo de tabulador:
 set tabstop=4
 "Cambiamos el aspecto
@@ -128,7 +134,7 @@ set statusline=
 set statusline+=%02n\|
 set statusline+=%-.25F
 set statusline+=[%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
-set statusline+=\ %{strftime(\"%H:%M\")}
+"set statusline+=\ %{strftime(\"%H:%M\")}
 set ruler "Muestra lﾃｭnea y columna 
 set wrapscan
 set number
@@ -185,7 +191,48 @@ let g:startify_custom_footer = [
 						\'                                                                                                   \/',
 						\'',
 						\]
+"Configuración python_mode plugin
+let g:pymode_rope = 0
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_write = 1
 
+"Con python mode se pueden agregar breakpoints
+
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+"Documentación
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+let g:pymode_folding = 0
+
+"vim-airline
+let g:airline_powerline_fonts = 1
+
+"vim-jedi
+let g:jedi#auto_initialization = 1
+let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#use_splits_not_buffers = "left"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = "<leader>d"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
+let g:jedi#show_call_signatures = 1
+
+"vim-pomodoro
+let g:tomato#remind = " \uf003 "
+let g:tomato#interval = 25 * 60
+let g:tomato#restinfo = " \ufe000 "
+let g:tomato#show_clock = 1
+
+
+
+"
 "##############################################################
 " Creditos 
 "##############################################################
@@ -195,7 +242,7 @@ let g:startify_custom_footer = [
 "http://nvie.com/posts/how-i-boosted-my-vim/
 "https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
 "http://blog.sanctum.geek.nz/vim-annoyances/
-"
+"http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
 
 
 
