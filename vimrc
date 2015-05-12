@@ -15,6 +15,7 @@ call pathogen#helptags()
 filetype plugin indent on
 "Codificación japones
 "set fileencodings=iso-2022-jp,euc,jp,cp932,utf8,default,latin1
+set visualbell
 
 "##############################################################
 " Opciones bﾃ｡sicas
@@ -203,6 +204,8 @@ let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
+"github_dashboard
+let g:github_dashboard = { 'username': 'bodypheo' }
 
 "Documentación
 let g:pymode_doc = 1
