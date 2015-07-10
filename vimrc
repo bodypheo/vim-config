@@ -58,6 +58,7 @@ nmap <silent> <leader>tl :set invnumber<cr>
 nmap <silent> <leader>c :Errors<cr> 
 nmap <silent> <leader>n :NERDTree<cr> 
 nmap <silent> <leader>a :@:<cr>
+nmap <silent> <F4> :Dict<cr>
 
 if exists('$TMUX')
 		set term=screen-256color
