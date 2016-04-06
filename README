@@ -8,8 +8,9 @@ Instalación de vim con git
 Crear enlaces simbólicos
     ln -s ~/.vim/vimrc ~/.vimrc
     ln -s ~/.vim/~/.gvimrc
-Cambiar al directior ~/.vim e iniciar el repositorio
+Cambiar al directorio ~/.vim e iniciar el repositorio
     git submodule init
+
 Instalar plguins
 cd ~/.vim
 mkdir ~/.vim/bundle
@@ -18,3 +19,7 @@ Añadimos el directorio actual completo:
 git add .
 Hacemos un commit con la descripción del cambio.
 git commit -m "Install Fugitive.vim bundle as a submodule."
+
+Clonar
+
+git clone --recursive http://github.com/bodypheo/vim-config.git .vim
