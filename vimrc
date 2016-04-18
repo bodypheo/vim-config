@@ -17,6 +17,8 @@ filetype plugin indent on
 "set fileencodings=iso-2022-jp,euc,jp,cp932,utf8,default,latin1
 set visualbell
 
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
 "##############################################################
 " Opciones bﾃ｡sicas
 "##############################################################
@@ -24,7 +26,7 @@ set visualbell
 ":checkdate o al guardar.Tambiﾃｩn se puede poner un autocmd
 set autoread
 "Cambia atuomáticamente al directorio del fichero abierto
-set autochdir
+"set autochdir
 "Deshabilitamos los archivos de copia de seguridad
 set nobackup
 set noswapfile
@@ -56,7 +58,7 @@ nmap <silent> <leader>ea :e ~/.config/openbox/autostart<cr>
 nmap <silent> <leader>et :e ~/.tmux.conf<cr>
 nmap <silent> <leader>tl :set invnumber<cr>
 nmap <silent> <leader>c :Errors<cr> 
-nmap <silent> <leader>n :NERDTree<cr> 
+nmap <silent> <leader>e :VimFiler<cr> 
 nmap <silent> <leader>a :@:<cr>
 nmap <silent> <F4> :Dict<cr>
 nnoremap <leader>r :!%:p<cr>
