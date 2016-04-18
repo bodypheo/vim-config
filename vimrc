@@ -59,6 +59,9 @@ nmap <silent> <leader>c :Errors<cr>
 nmap <silent> <leader>n :NERDTree<cr> 
 nmap <silent> <leader>a :@:<cr>
 nmap <silent> <F4> :Dict<cr>
+nnoremap <leader>r :!%:p<cr>
+nnoremap <leader>j :bp<cr>
+nnoremap <leader>k :bn<cr>
 
 if exists('$TMUX')
 		set term=screen-256color
@@ -249,7 +252,15 @@ let g:tomato#interval = 25 * 60
 let g:tomato#restinfo = " \ufe000 "
 let g:tomato#show_clock = 1
 
-
+augroup json_autocmd
+	autocmd!
+	autocmd FileType json set autoindent
+	autocmd FileType json set formatoptions=tcq2l
+	autocmd FileType json set textwidth=78 shiftwidth=4
+	autocmd FileType json set softtabstop=4 tabstop=8
+	autocmd FileType json set expandtab
+	autocmd FileType json set foldmethod=syntax
+augroup END
 
 "
 "##############################################################
