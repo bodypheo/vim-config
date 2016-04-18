@@ -23,3 +23,5 @@ git commit -m "Install Fugitive.vim bundle as a submodule."
 Clonar
 
 git clone --recursive http://github.com/bodypheo/vim-config.git .vim
+
+Profit!
