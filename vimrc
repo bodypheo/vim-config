@@ -254,6 +254,9 @@ let g:tomato#interval = 25 * 60
 let g:tomato#restinfo = " \ufe000 "
 let g:tomato#show_clock = 1
 
+"Ctrl-P
+let g:ctrlp_custom_ignore =  '^.git$\|_site'
+
 augroup json_autocmd
 	autocmd!
 	autocmd FileType json set autoindent
@@ -275,7 +278,3 @@ augroup END
 "https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
 "http://blog.sanctum.geek.nz/vim-annoyances/
 "http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
-
-
-
-
