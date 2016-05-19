@@ -45,6 +45,9 @@ set secure "Hace exrc que sea seguro.
 set backspace=start,indent,eol
 set mouse=a
 set encoding=utf-8
+"Completado al pulsar tab al usar comandos
+set wildmenu
+set wildmode=list:longest,full
 "##############################################################
 "Mapeo de teclas
 "##############################################################
