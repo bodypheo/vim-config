@@ -7,7 +7,7 @@
 " Ctrl-h/j/k/l Mueve por ventanas para no tener que pulsar control+w
 ",em edita menu de openbox ,er edita rc de openbox
 "F9 ejecuta el script de python
-
+echo ">^.^<"
 set nocompatible
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -64,6 +64,7 @@ nmap <silent> <leader>c :Errors<cr>
 nmap <silent> <leader>e :VimFiler<cr> 
 nmap <silent> <leader>a :@:<cr>
 nmap <silent> <F4> :Dict<cr>
+nmap <silent> <leader>bd :call Drae()<cr>
 nnoremap <leader>r :!%:p<cr>
 nnoremap <leader>j :bp<cr>
 nnoremap <leader>k :bn<cr>
@@ -134,6 +135,12 @@ nmap <leader>md :%!~/.vim/external/Markdown.pl --html4tags<cr>
 "Instertar fecha
 :nnoremap <F5> "=strftime("%c")<CR>P
 :inoremap <F5> <C-R>=strftime("%c")<CR>
+
+" Ultisnips config
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/bundle/vim-snippets/Ultisnips']
 
 "##############################################################
 " Opciones grﾃ｡ficas
@@ -281,3 +288,12 @@ augroup END
 "https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
 "http://blog.sanctum.geek.nz/vim-annoyances/
 "http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
+"
+"My first function
+function! Drae()
+		let wordToSearch = expand("<cword>")
+		split
+		enew
+		call append(0,wordToSearch)
+"		echom wordToSearch
+endfunction
