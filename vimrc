@@ -7,7 +7,6 @@
 " Ctrl-h/j/k/l Mueve por ventanas para no tener que pulsar control+w
 ",em edita menu de openbox ,er edita rc de openbox
 "F9 ejecuta el script de python
-echo ">^.^<"
 set nocompatible
 filetype off
 call pathogen#runtime_append_all_bundles()
