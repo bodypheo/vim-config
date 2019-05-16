@@ -42,7 +42,7 @@ set hidden
 set exrc "Respeta los archivos .exrc y .vimrc locales en carpetas
 set secure "Hace exrc que sea seguro.
 set backspace=start,indent,eol
-set mouse=a
+set mouse=r
 set encoding=utf-8
 "Completado al pulsar tab al usar comandos
 set wildmenu
