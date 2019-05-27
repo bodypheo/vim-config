@@ -212,6 +212,7 @@ let g:startify_custom_header = [
 \'                 \  \::/        /__/:/        /__/:/        /__/:/       \__\/    ',
 \'                  \__\/         \__\/         \__\/         \__\/',
 \'',
+\'Vimwiki: <leader>ww',
 \]
 let g:startify_custom_footer = [
 						\'                                                                                          .__         ',
@@ -288,7 +289,7 @@ augroup END
 "http://blog.sanctum.geek.nz/vim-annoyances/
 "http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
 "
-"My first function
+"My first function WiP
 function! Drae()
 		let wordToSearch = expand("<cword>")
 		split
