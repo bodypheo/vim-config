@@ -29,6 +29,9 @@ set autoread
 "Deshabilitamos los archivos de copia de seguridad
 set nobackup
 set noswapfile
+set undofile "Guarda deshacer entre sesiones
+set undodir=~/.undovim
+
 "Configuraciones sobre busquedas.
 set ignorecase "Ignora mayﾃｺsculas cuando busca
 set smartcase "Ignora may si el tﾃｩrmino de busq es minﾃｺscula si tiene may no.
