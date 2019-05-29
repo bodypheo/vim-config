@@ -31,6 +31,7 @@ set nobackup
 set noswapfile
 set undofile "Guarda deshacer entre sesiones
 set undodir=~/.undovim
+set showtabline=2
 
 "Configuraciones sobre busquedas.
 set ignorecase "Ignora mayﾃｺsculas cuando busca
