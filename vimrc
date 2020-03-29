@@ -271,6 +271,9 @@ let g:tomato#interval = 25 * 60
 let g:tomato#restinfo = " \ufe000 "
 let g:tomato#show_clock = 1
 
+"Syntax de includes de ssh .hosts
+autocmd BufNewFile,BufRead *.hosts set syntax=sshconfig
+
 "Ctrl-P
 let g:ctrlp_custom_ignore =  '^.git$\|_site'
 
