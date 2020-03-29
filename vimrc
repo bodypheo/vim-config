@@ -71,6 +71,7 @@ nmap <silent> <leader>bd :call Drae()<cr>
 nnoremap <leader>r :!%:p<cr>
 nnoremap <leader>j :bp<cr>
 nnoremap <leader>k :bn<cr>
+nnoremap <leader>x :!./%<cr>
 
 if exists('$TMUX')
 		set term=screen-256color
@@ -91,6 +92,9 @@ nnoremap :update<cr> <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 "Mapeamos ,s para salvado rﾃ｡pido
 noremap <leader>s :update<cr>
 noremap <leader>f /
+
+"Activar, desactivar la numeracion de líneas
+noremap <leader>z :set number!<cr>
 
 "Para avance de pﾃ｡gina con espacio
 map <Space> <C-d>
