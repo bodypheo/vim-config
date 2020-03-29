@@ -220,7 +220,10 @@ let g:startify_custom_header = [
 \'                 \  \::/        /__/:/        /__/:/        /__/:/       \__\/    ',
 \'                  \__\/         \__\/         \__\/         \__\/',
 \'',
+\'Atajos de teclados de la semana',
 \'Vimwiki: <leader>ww',
+\'Buffers: <leader>j & <leader>k',
+\'',
 \]
 let g:startify_custom_footer = [
 						\'                                                                                          .__         ',
