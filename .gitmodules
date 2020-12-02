@@ -1,9 +1,6 @@
 [submodule "conky-syntax.vim"]
 	path = conky-syntax.vim
 	url = https://github.com/smancill/conky-syntax.vim
-[submodule "bundle/closetag"]
-	path = bundle/closetag
-	url = https://github.com/docunext/closetag.vim.git
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = https://github.com/tomasr/molokai.git
