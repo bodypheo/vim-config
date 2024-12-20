@@ -73,6 +73,10 @@ nnoremap <leader>j :bp<cr>
 nnoremap <leader>k :bn<cr>
 nnoremap <leader>x :!./%<cr>
 
+" Vimwiki
+nmap <silent> <leader>h :lprevious<cr>
+nmap <silent> <leader>l :lnext<cr>
+
 if exists('$TMUX')
 		set term=screen-256color
 endif
@@ -87,7 +91,9 @@ if exists('$ITERM_PROFILE')
 end
 
 "Mapeado de ejecución de python
-nnoremap :update<cr> <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
 
 "Mapeamos ,s para salvado rﾃ｡pido
 noremap <leader>s :update<cr>
@@ -222,6 +228,9 @@ let g:startify_custom_header = [
 \'',
 \'Atajos de teclados de la semana',
 \'Vimwiki: <leader>ww',
+\'Búsqueda wiki: :VWS',
+\'Elemento siguiente busqueda: <leader>l',
+\'Elemento anterior busqueda: <leader>ww',
 \'Buffers: <leader>j & <leader>k',
 \'',
 \]
